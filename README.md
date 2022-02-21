@@ -1,2 +1,2 @@
 # Hello_World
-学习用（python）
+学习用（GitHub, python）
