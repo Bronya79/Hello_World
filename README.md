@@ -1,6 +1,11 @@
 # Hello_World
 
-学习用（GitHub, python）  
+## 学习用
+
+1. python
+2. git
+3. github
+4. 数据结构和算法
 
 ## 学习网站
 
