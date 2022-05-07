@@ -43,7 +43,7 @@ display.show(seq, delay=400,wait=True,loop=False,clear=False)
 ## LED点阵屏控制display
 
 - 开关显示屏
-	- display.on(),of()
+	- display.on(),off()
 - 显示字符串或者图像
 	- display.show(s)
 - 滚动显示字符串
@@ -52,3 +52,5 @@ display.show(seq, delay=400,wait=True,loop=False,clear=False)
 	- display.clesr()
 - 点亮一个像素（b=0~9）
 	- display.set_pixel(x, y, b)
+
+shake！
