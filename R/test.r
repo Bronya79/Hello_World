@@ -1,0 +1,63 @@
+#(1)
+names(mtcars)[1]<-"mileage"
+#(2)
+mtcars[mtcars$cyl>4,]
+#(3)
+order(mtcars$mileage)
+mtcars[order(mtcars$mileage),]
+#(4)
+apply(mtcars,2,sum)
+#(5)
+##Sys.Date()
+a<-"1979-01-01"
+a<-as.Date(a)
+b<-"2020-12-10"
+b<-as.Date(b)
+difftime(b,a,units = "weeks")
+#(6)
+y<-expression(sin(2*x))
+x<-seq(-pi,pi,by=0.001)
+eval(y)
+plot(x,eval(y))
+ya<-D(y,'x')
+plot(x,eval(ya))
+#(7)
+draw.circle<-function(R,xc,yc)
+{ theta<-seq(0,2*pi,length.out=1000)
+  x<-R*cos(theta)+xc
+  y<-R*sin(theta)+yc
+  plot(x,y,asp=1)
+}
+draw.circle(5,0,0)
+#(13)
+integrand<-function(x)
+{exp(-x^2/2)/sqrt(2*pi)}
+integrate(integrand,-1.96,1.96)
+pnorm(1.96)-pnorm(-1.96)
+#(8)
+paste("Hello","NUIST")
+#(9)
+for(i in 1:10){
+  print(paste("Hello,","NUIST"))
+}
+#(10)
+names(iris)
+library(ggplot2)
+ggplot(iris,aes(x=Sepal.Length,
+                y=Sepal.Width))+
+  geom_point()
+#(12)
+PlantGrowth
+aov.fit<-aov(weight~group,data=PlantGrowth)
+summary(aov.fit)
+#(11)
+set.seed(111)
+x.vector<-rnorm(1000,2,3)
+maxl<-function(para,x)
+{
+  mu<-para[1]
+  sigma<-para[2]
+  res<-sum(dnorm(x,mu,sigma,log=T))
+  return(-res)
+}
+optim(c(2,5),maxl,x=x.vector)
